@@ -91,10 +91,10 @@ function main() {
 		// Add Day Background
 		var hr = (new Date()).getHours();
 		if((hr >= 7) && (hr <= 18)){
-			dnBg = game.add.tileSprite(0, 0, game.world.width, game.world.height - 32, 'daybg');
+			dnBg = game.add.tileSprite(0, 0, game.world.width, game.world.height, 'daybg');
 		}
 		else{
-			dnBg = game.add.tileSprite(0, 0, game.world.width, game.world.height - 32, 'nightbg');
+			dnBg = game.add.tileSprite(0, 0, game.world.width, game.world.height, 'nightbg');
 		}
 		// Add fingers
 		fingers	= game.add.group();
@@ -367,6 +367,6 @@ window.addEventListener('load', function readerOnLoad(evt) {
   if(window.innerHeight<=420)
 	cnx.style.maxHeight= (window.innerHeight) + "px";
   else
-	cnx.style.maxHeight= (window.innerHeight - 100) + "px";
+	cnx.style.maxHeight= (window.innerHeight - 30) + "px";
   main();  
 });
